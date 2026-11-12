@@ -1,0 +1,34 @@
+# Android and Binary Artifacts (GitHub file size limit: 100MB)
+*.apk
+*.aab
+*.dex
+*.jar
+*.so
+*.zip
+*.tar.gz
+*.part
+*.part.meta
+
+# Samples directory (keep directory and gitignore, ignore large sample binaries)
+vanced-audit/samples/*
+!vanced-audit/samples/.gitignore
+!vanced-audit/samples/README.md
+
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Decompilation and tooling output
+jadx-bin/
+decompiled/
+vanced-audit/decompiled/
+.system_generated/
+rea-temp/
+node_modules/
+
+# Operating System artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
