@@ -1,6 +1,12 @@
 # Consolidated Network Endpoint & Domain Audit
 
-This document inventories and classifies all external network domains and endpoints extracted from Dalvik bytecode string pools across the 6 audited targets.
+**Audit Reference**: `EVD-NET-LEDGER-001`  
+**Security Classification**: Defensive Malware & Supply-Chain Assessment  
+**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
+
+---
+
+This document inventories and classifies all 435 external network domains and endpoints extracted from Dalvik bytecode string pools across the 6 audited targets.
 
 ## 1. Classification Summary
 
@@ -477,3 +483,7 @@ This document inventories and classifies all external network domains and endpoi
 
 * **C2 & Bot Traffic**: Zero Telegram bots (`api.telegram.org`), Discord webhooks (`discord.com/api/webhooks`), or IRC/custom TCP C2 protocols were identified in any of the 6 APKs.
 * **Adware Networks**: Zero aggressive third-party ad networks (AppLovin, IronSource, UnityAds) were injected into any of the applications.
+
+---
+
+**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)

@@ -6,7 +6,11 @@
 ![Audit Status](https://img.shields.io/badge/Audit%20Status-Complete-brightgreen)
 ![Language](https://img.shields.io/badge/Language-English%20(UK%2FIndia)-informational)
 
-This repository contains a comprehensive, defensive mobile malware and supply-chain security audit of **ReVanced Manager Plus** and **five popular prebuilt patched Android applications** distributed by the third-party website `https://vanced.to`.
+**Navigation**: [Root Repository README](../README.md) | [Executive Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md) | [Recommendations](06-recs.md)
+
+---
+
+This directory contains the detailed technical audit deliverables and forensic dossiers for **ReVanced Manager Plus** and **five popular prebuilt patched Android applications** distributed by the third-party website `https://vanced.to`.
 
 All investigations were conducted using the **Reverse-Engineer-Anything (REA)** defensive Android static analysis route, strictly isolating target binaries without device installation or host execution.
 
@@ -197,4 +201,8 @@ Detailed recommendations and step-by-step CLI compilation commands are available
 ## 10. Disclaimer & Research Context
 
 This repository represents independent, defensive security research and software supply-chain analysis. All trademarks, service marks, and trade names are the property of their respective owners. The tools and techniques described herein are presented solely for threat analysis, malware detection, and user protection.
+
+---
+
+**Navigation**: [Root Repository README](../README.md) | [Executive Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md) | [Recommendations](06-recs.md)
 

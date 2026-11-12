@@ -1,75 +1,109 @@
-# Security Recommendations & Safe Patching Guide
+# Defensive Recommendations & Reproducible Local Build Guide
 
-## 1. Supply-Chain Risk: Prebuilt Patched APKs vs Local Compilation
-
-Downloading prebuilt modified binaries from third-party distribution websites (such as `vanced.to`, `revanced.net`, or unofficial Telegram channels) poses severe security risks:
-
-* **No Immutable Provenance**: Users cannot verify whether the downloaded APK was built directly from open-source code or if malicious code was injected prior to packaging.
-* **Shared Signing Keys**: Prebuilt APKs are signed with well-known public test keys (`CN=ReVanced`). Anyone possessing this public key can craft an update that Android will accept as an upgrade over the existing installation.
-* **Lack of Independent Verification**: Prebuilt download hubs can replace binaries at any time on their servers without warning.
+**Audit Reference**: `EVD-REC-GUIDE-001`  
+**Security Classification**: Defensive Mobile Threat Remediation & Hardening  
+**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
 
 ---
 
-## 2. Official Project Sources vs Third-Party Impersonators
+## 1. Primary Remediation Steps
 
-| Role | Official Source | Known Unofficial Mirrors / Impersonators (Avoid) |
+### 1.1 Immediate Uninstallation of ReVanced Manager Plus
+Users who have installed `ReVanced Manager Plus` (`com.revanced.net.revancedmanager`) should remove it from their devices immediately:
+1. Open Android **Settings** > **Apps** > **All Apps**.
+2. Locate **RV Manager +** or **ReVanced Manager Plus**.
+3. Select **Uninstall**.
+4. Revoke any elevated permissions previously granted (specifically **Install unknown apps**).
+
+**Rationale**: The utility is published by an unofficial commercial distributor (`revanced.net`) and contains no local patcher logic. Its download pipeline checks only HTTP file length and performs zero SHA-256 or certificate verification, creating an unmitigated supply-chain vulnerability.
+
+### 1.2 Discontinue Acquiring Prebuilt Modded APKs
+Never download pre-compiled modified APK binaries from third-party websites (`vanced.to`, `revanced.net`, `apkpure.com`) or untrusted Telegram channels. Even though the five prebuilt application binaries tested in this audit were clean at the time of download, third-party distribution servers can silently swap binaries with trojaned versions at any time without user notification.
+
+---
+
+## 2. Official Toolchain Verification & Sources
+
+Always acquire patching software directly from verified, official source repositories:
+
+| Project Component | Official Web Domain | Official GitHub Repository |
 | :--- | :--- | :--- |
-| **ReVanced Project** | [revanced.app](https://revanced.app)<br>[github.com/ReVanced](https://github.com/ReVanced) | `vanced.to`, `revanced.net`, `revanced.io`, `revancedmanager.com` |
-| **Morphe Project** | [morphe.software](https://morphe.software)<br>[github.com/MorpheApp](https://github.com/MorpheApp) | Third-party Telegram aggregators, unvetted GitHub forks |
-| **MicroG / GmsCore** | [github.com/ReVanced/GmsCore](https://github.com/ReVanced/GmsCore) | Random APK hosting sites |
+| **Official ReVanced Website** | [`https://revanced.app`](https://revanced.app) | N/A |
+| **Official ReVanced Manager** | [`https://revanced.app/download`](https://revanced.app/download) | [`ReVanced/revanced-manager`](https://github.com/ReVanced/revanced-manager) |
+| **Official ReVanced CLI** | N/A | [`ReVanced/revanced-cli`](https://github.com/ReVanced/revanced-cli) |
+| **Official ReVanced Patches** | N/A | [`ReVanced/revanced-patches`](https://github.com/ReVanced/revanced-patches) |
+| **Official Morphe Project** | [`https://morphe.software`](https://morphe.software) | [`MorpheApp/morphe-patches`](https://github.com/MorpheApp/morphe-patches) |
+| **Official GmsCore / MicroG** | N/A | [`ReVanced/GmsCore`](https://github.com/ReVanced/GmsCore) |
 
 ---
 
-## 3. Recommended Safe Workflow: Patching Locally via ReVanced Manager
+## 3. Reproducible DIY Local Compilation Guide (ReVanced CLI)
 
-The safest method to use ReVanced applications is to compile them on your own device using the official **ReVanced Manager**.
+Compiling patched applications locally on your own workstation or device provides complete assurance of supply-chain integrity.
 
-### Step 1: Install Official ReVanced Manager
-1. Download the latest official release APK strictly from [revanced.app](https://revanced.app) or the official repository [`ReVanced/revanced-manager`](https://github.com/ReVanced/revanced-manager/releases).
-2. Verify the signing certificate belongs to the ReVanced team.
+### 3.1 Environment Prerequisites
+* **Java Runtime Environment**: OpenJDK 17 or 21 (`java -version`).
+* **Official CLI Binary**: Download the latest `revanced-cli-*-all.jar` from [`ReVanced/revanced-cli/releases`](https://github.com/ReVanced/revanced-cli/releases).
+* **Official Patches Bundle**: Download `revanced-patches-*.jar` from [`ReVanced/revanced-patches/releases`](https://github.com/ReVanced/revanced-patches/releases).
+* **Clean Stock APK**: Obtain a clean, unmodified stock APK from a reputable archive (such as APKMirror). Verify that the APK version matches the recommended target version in the patch release notes.
 
-### Step 2: Acquire Clean Original Application Binaries
-1. Obtain the recommended target version of the unmodified stock APK from a reputable archive (such as APKMirror). Ensure you download the **nodpi universal APK**, not an APK bundle or split APK.
-2. Do not install the stock APK; save it to your device's internal storage.
-
-### Step 3: Patch and Compile Locally
-1. Open **ReVanced Manager**.
-2. Navigate to **Patcher** > **Select an application**.
-3. Tap **Storage** and select the clean stock APK downloaded in Step 2.
-4. Review the recommended patch list.
-5. Tap **Patch**. The manager will decompile, modify Dalvik bytecode, and repackage the binary locally in device memory.
-6. When compilation completes, tap **Install**.
-
----
-
-## 4. Advanced: Reproducible Building via ReVanced CLI (Command Line)
-
-For security professionals and advanced users, building with **ReVanced CLI** on a computer ensures full control, custom private keystores, and reproducible auditing.
-
-### Prerequisites
-* Java Development Kit (JDK) 17 or 21 installed.
-* Target clean unmodified APK (e.g., `youtube.apk`).
-
-### Commands
+### 3.2 Step 1: Generate a Private Android Keystore
+By default, the ReVanced CLI signs patched APKs with a public test key (`CN=ReVanced`). To eliminate the risk of third-party update collisions or signature spoofing, generate your own private keystore:
 
 ```bash
-# 1. Download official tools from github.com/ReVanced
-curl -L -O https://github.com/ReVanced/revanced-cli/releases/latest/download/revanced-cli.jar
-curl -L -O https://github.com/ReVanced/revanced-patches/releases/latest/download/revanced-patches.jar
-
-# 2. (Optional) Generate your own private signing keystore
-keytool -genkey -v -keystore my-personal-key.keystore -alias my-key \
-  -keyalg RSA -keysize 2048 -validity 10000
-
-# 3. Patch the clean stock APK
-java -jar revanced-cli.jar patch \
-  --patches revanced-patches.jar \
-  --keystore my-personal-key.keystore \
-  --out youtube-patched-clean.apk \
-  youtube-stock.apk
+# Generate a private 2048-bit RSA keystore valid for 30 years
+keytool -genkey -v \
+  -keystore my-release-key.keystore \
+  -alias my-key-alias \
+  -keyalg RSA \
+  -keysize 2048 \
+  -validity 10000 \
+  -dname "CN=PrivateUser, OU=Personal, O=Secure, C=IN"
 ```
 
-### Benefits of Custom Key Signing
-* Your patched app is signed with a private key known only to you.
-* No malicious third party or prebuilt distribution service can deliver an update that overwrites your installation.
+### 3.3 Step 2: Compile YouTube ReVanced Locally
+Execute the following command to decompile, apply verified open-source patches, and assemble the output binary:
 
+```bash
+java -jar revanced-cli-*-all.jar patch \
+  --patches revanced-patches-*.jar \
+  --keystore my-release-key.keystore \
+  --keystore-entry-alias my-key-alias \
+  --out youtube-revanced-clean.apk \
+  stock-youtube-v21.16.xx.apk
+```
+
+### 3.4 Step 3: Compile YouTube Music ReVanced Locally
+
+```bash
+java -jar revanced-cli-*-all.jar patch \
+  --patches revanced-patches-*.jar \
+  --keystore my-release-key.keystore \
+  --keystore-entry-alias my-key-alias \
+  --out ytmusic-revanced-clean.apk \
+  stock-ytmusic-v9.15.xx.apk
+```
+
+---
+
+## 4. Mobile Hardening Checklist for Android Users
+
+1. **Keep "Install Unknown Apps" Disabled**:
+   * Navigate to **Settings** > **Apps** > **Special App Access** > **Install Unknown Apps**.
+   * Ensure that web browsers, messaging apps, and file managers have this permission toggled **Off**. Enable it only temporarily during intentional sideloading sessions.
+2. **Verify Cryptographic Hashes Before Installing**:
+   * Prior to installing any APK on your device, compute its SHA-256 hash on your computer (`certutil -hashfile app.apk SHA256` on Windows or `sha256sum app.apk` on Linux/macOS).
+   * Confirm the digest matches official published release hashes.
+3. **Inspect Signing Certificate Fingerprints**:
+   * Inspect the signing key before installation using `apksigner`:
+     ```bash
+     apksigner verify --print-certs app.apk
+     ```
+   * Confirm that the signer matches your trusted keystore rather than an unverified third party.
+4. **Isolate GmsCore / MicroG**:
+   * Download `GmsCore` exclusively from official repositories (`https://github.com/ReVanced/GmsCore`).
+   * Never grant GmsCore unnecessary device-admin or accessibility permissions.
+
+---
+
+**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
