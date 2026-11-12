@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-NET-LEDGER-001`  
 **Security Classification**: Defensive Malware & Supply-Chain Assessment  
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
 
 ---
 
@@ -486,4 +486,4 @@ This document inventories and classifies all 435 external network domains and en
 
 ---
 
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)

@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-REC-GUIDE-001`  
 **Security Classification**: Defensive Mobile Threat Remediation & Hardening  
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
 
 ---
 
@@ -106,4 +106,4 @@ java -jar revanced-cli-*-all.jar patch \
 
 ---
 
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Malware Report](05-malware-report.md)

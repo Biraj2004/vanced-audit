@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-MGR-DOSSIER-001`  
 **Security Classification**: Defensive Malware & Supply-Chain Assessment  
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Malware Report](05-malware-report.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Malware Report](05-malware-report.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md)
 
 ---
 
@@ -196,4 +196,4 @@ Because `DownloadWorker.java` performs no cryptographic integrity validation, an
 
 ---
 
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Malware Report](05-malware-report.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Malware Report](05-malware-report.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md)

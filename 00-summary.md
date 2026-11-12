@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-SUM-EXECUTIVE-001`  
 **Security Classification**: Defensive Mobile Threat Intelligence & Forensic Summary  
-**Navigation**: [Root Repository README](../README.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md) | [Recommendations](06-recs.md)
+**Navigation**: [Overview](README.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md) | [Recommendations](06-recs.md)
 
 ---
 
@@ -44,7 +44,7 @@ The assessment adhered strictly to the **Reverse-Engineer-Anything (REA)** defen
 +-----------------------------------------------------------------------------------+
 |                            REA FORENSIC WORKFLOW                                  |
 +-----------------------------------------------------------------------------------+
-|  1. Acquisition & Hash Baseline (vanced-audit/apks-tested/)                       |
+|  1. Acquisition & Hash Baseline (apks-tested/)                              |
 |     -> SHA-256, SHA-1, MD5, byte size, download timestamps                        |
 +-----------------------------------------------------------------------------------+
                                          |
@@ -122,4 +122,4 @@ The complete audit output is structured into the following files:
 
 ---
 
-**Navigation**: [Root Repository README](../README.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md) | [Recommendations](06-recs.md)
+**Navigation**: [Overview](README.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Patch Provenance](03-patches.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md) | [Recommendations](06-recs.md)

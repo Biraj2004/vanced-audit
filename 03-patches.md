@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-PAT-MAPPING-001`  
 **Security Classification**: Defensive Malware & Supply-Chain Assessment  
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md)
 
 ---
 
@@ -106,4 +106,4 @@ Comparing the prebuilt binaries distributed by `vanced.to` against official comm
 
 ---
 
-**Navigation**: [Root Repository README](../README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md)
+**Navigation**: [Overview](README.md) | [Audit Summary](00-summary.md) | [Hash Ledger](01-hashes.csv) | [Manager Teardown](02-manager.md) | [Network Triage](04-network.md) | [Malware Report](05-malware-report.md)
