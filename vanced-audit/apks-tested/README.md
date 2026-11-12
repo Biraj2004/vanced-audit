@@ -16,3 +16,4 @@ To verify or reproduce the audit samples, acquire the files from the recorded so
 | **Strava** | `vanced.to_rushi_com.strava_arm64v8a_v480.15_cli1.20.0.5_p1.23.1.1.apk` | 122,829,417 | `60b3e22f226067d473adb032d83972750112ccdcb5b95bc0efe603b6650f14d8` |
 | **YouTube ReVanced** | `vanced.to_revanced_com.google.android.youtube_arm64v8a_v21.16.256_cli6.0.0_p6.3.0_cb9a113e85.apk` | 195,914,241 | `e948a7ef5692c227ab7f8425cb71818e7f075f6d3bba61346fb68fc00afdfb7c` |
 | **YouTube Music ReVanced** | `vanced.to_revanced_com.google.android.apps.youtube.music_arm64v8a_v9.15.51_cli6.0.0_p6.2.0_c6507b5051.apk` | 78,762,579 | `841156b72979b80ff05aafbcd9cb8269a04e5688f4c25cf500e3abbe902ee32c` |
+

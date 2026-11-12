@@ -45,7 +45,7 @@ The assessment adhered strictly to the **Reverse-Engineer-Anything (REA)** defen
 +-----------------------------------------------------------------------------------+
 |                            REA FORENSIC WORKFLOW                                  |
 +-----------------------------------------------------------------------------------+
-|  1. Acquisition & Hash Baseline (vanced-audit/samples/)                            |
+|  1. Acquisition & Hash Baseline (vanced-audit/apks-tested/)                        |
 |     -> SHA-256, SHA-1, MD5, byte size, download timestamps                        |
 +-----------------------------------------------------------------------------------+
                                          |
@@ -111,11 +111,11 @@ The complete audit output is structured into the following files:
 * [`01-hashes.csv`](01-hashes.csv): Complete tabular record of filenames, versions, sizes, SHA-256, SHA-1, MD5, signer fingerprints, and download URLs.
 * [`02-manager.md`](02-manager.md): Comprehensive teardown of ReVanced Manager Plus architecture, signing, and verification flaws.
 * **Application Dossiers**:
-  * [`apps/gphotos.md`](apps/gphotos.md): Morphe Google Photos analysis.
-  * [`apps/reddit.md`](apps/reddit.md): Morphe Reddit analysis.
-  * [`apps/strava.md`](apps/strava.md): Strava subscription entitlement analysis.
-  * [`apps/youtube.md`](apps/youtube.md): YouTube ReVanced flagship analysis.
-  * [`apps/ytmusic.md`](apps/ytmusic.md): YouTube Music ReVanced analysis.
+  * [`apks-tested-report/gphotos.md`](apks-tested-report/gphotos.md): Morphe Google Photos analysis.
+  * [`apks-tested-report/reddit.md`](apks-tested-report/reddit.md): Morphe Reddit analysis.
+  * [`apks-tested-report/strava.md`](apks-tested-report/strava.md): Strava subscription entitlement analysis.
+  * [`apks-tested-report/youtube.md`](apks-tested-report/youtube.md): YouTube ReVanced flagship analysis.
+  * [`apks-tested-report/ytmusic.md`](apks-tested-report/ytmusic.md): YouTube Music ReVanced analysis.
 * [`03-patches.md`](03-patches.md): Community patch framework identification, version mapping, and commit tracking.
 * [`04-network.md`](04-network.md): Consolidated domain and IP classification ledger.
 * [`05-malware-report.md`](05-malware-report.md): Formal malware findings, indicators of compromise, and false-positive notes.

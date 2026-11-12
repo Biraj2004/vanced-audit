@@ -1,24 +1,38 @@
+# ==============================================================================
+# Git Ignore Configuration - Defensive Mobile Malware Audit Repository
+# ==============================================================================
+
 # Android and Binary Artifacts (GitHub file size limit: 100MB)
 *.apk
 *.aab
 *.dex
 *.jar
 *.so
+*.aar
+
+# Archive formats
 *.zip
 *.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Partial downloads and temporary download markers
 *.part
 *.part.meta
+*.crdownload
 
-# Samples directory (keep directory and gitignore, ignore large sample binaries)
-vanced-audit/samples/*
-!vanced-audit/samples/.gitignore
-!vanced-audit/samples/README.md
+# Tested APK binaries (keep directory metadata, ignore large APKs)
+vanced-audit/apks-tested/*
+!vanced-audit/apks-tested/.gitignore
+!vanced-audit/apks-tested/README.md
 
 # Python cache and temporary files
 __pycache__/
 *.py[cod]
 *$py.class
 *.log
+.pytest_cache/
 
 # Decompilation and tooling output
 jadx-bin/
@@ -32,3 +46,10 @@ node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
+ehthumbs.db
+
+# Whitelist all audit reports, ledgers, and documentation
+!*.md
+!*.csv
+!*.txt
+!*.json
