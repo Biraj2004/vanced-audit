@@ -99,7 +99,7 @@ Detailed analysis: [`02-manager.md`](02-manager.md).
 
 ## 5. Patch Provenance & Community Forks
 
-Complete provenance mapping and git commit tracking is available in [`vanced-audit/03-patches.md`](vanced-audit/03-patches.md):
+Complete provenance mapping and git commit tracking is available in [`03-patches.md`](03-patches.md):
 
 * **Official ReVanced Patches** ([`github.com/ReVanced/revanced-patches`](https://github.com/ReVanced/revanced-patches)):
   * YouTube ReVanced: Patches `p6.3.0` (Commit: `cb9a113e85`), CLI `6.0.0`
@@ -114,7 +114,7 @@ Complete provenance mapping and git commit tracking is available in [`vanced-aud
 
 ## 6. Network Infrastructure & Endpoint Classification
 
-The complete ledger categorizing 435 unique extracted network domains is documented in [`vanced-audit/04-network.md`](vanced-audit/04-network.md):
+The complete ledger categorizing 435 unique extracted network domains is documented in [`04-network.md`](04-network.md):
 
 * **High / Medium Supply-Chain Risk Endpoints**:
   * `vanced.to` / `https://vanced.to/apps-v3.json`: Dynamic catalogue API used by ReVanced Manager Plus.
