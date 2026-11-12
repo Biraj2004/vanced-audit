@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-RED-DOSSIER-001`  
 **Security Classification**: Defensive Malware & Supply-Chain Assessment  
-**Navigation**: [Root Repository README](../../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)
+**Navigation**: [Overview](../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)
 
 ---
 
@@ -149,4 +149,4 @@ No credential harvesting proxies, Telegram webhook bots (`api.telegram.org`), Di
 
 ---
 
-**Navigation**: [Root Repository README](../../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)
+**Navigation**: [Overview](../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)

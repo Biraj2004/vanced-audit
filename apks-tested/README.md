@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-SAM-STORAGE-001`  
 **Security Classification**: Defensive Malware Artifact Quarantine  
-**Navigation**: [Root Repository README](../../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Manager Teardown](../02-manager.md) | [Malware Report](../05-malware-report.md)
+**Navigation**: [Overview](../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Manager Teardown](../02-manager.md) | [Malware Report](../05-malware-report.md)
 
 ---
 
@@ -10,13 +10,13 @@
 
 This directory stores raw target Android Application Packages (APKs) downloaded from `https://vanced.to` for static reverse engineering.
 
-In accordance with **GitHub file size restrictions** (which reject pushes containing individual files exceeding 100 MiB) and defensive malware handling standards, raw application binaries are **not committed to version control**. They are ignored by the root [`.gitignore`](../../.gitignore):
+In accordance with **GitHub file size restrictions** (which reject pushes containing individual files exceeding 100 MiB) and defensive malware handling standards, raw application binaries are **not committed to version control**. They are ignored by the root [`.gitignore`](../.gitignore):
 
 ```gitignore
 # Excerpt from root .gitignore
-vanced-audit/apks-tested/*
-!vanced-audit/apks-tested/.gitignore
-!vanced-audit/apks-tested/README.md
+apks-tested/*
+!apks-tested/.gitignore
+!apks-tested/README.md
 ```
 
 ---
@@ -57,4 +57,4 @@ sha256sum *.apk
 
 ---
 
-**Navigation**: [Root Repository README](../../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Manager Teardown](../02-manager.md) | [Malware Report](../05-malware-report.md)
+**Navigation**: [Overview](../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Manager Teardown](../02-manager.md) | [Malware Report](../05-malware-report.md)

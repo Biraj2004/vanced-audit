@@ -23,9 +23,9 @@
 *.crdownload
 
 # Tested APK binaries (keep directory metadata, ignore large APKs)
-vanced-audit/apks-tested/*
-!vanced-audit/apks-tested/.gitignore
-!vanced-audit/apks-tested/README.md
+apks-tested/*
+!apks-tested/.gitignore
+!apks-tested/README.md
 
 # Python cache and temporary files
 __pycache__/
@@ -37,7 +37,6 @@ __pycache__/
 # Decompilation and tooling output
 jadx-bin/
 decompiled/
-vanced-audit/decompiled/
 .system_generated/
 rea-temp/
 node_modules/
@@ -53,3 +52,4 @@ ehthumbs.db
 !*.csv
 !*.txt
 !*.json
+

@@ -2,7 +2,7 @@
 
 **Audit Reference**: `EVD-GPH-DOSSIER-001`  
 **Security Classification**: Defensive Malware & Supply-Chain Assessment  
-**Navigation**: [Root Repository README](../../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)
+**Navigation**: [Overview](../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)
 
 ---
 
@@ -146,4 +146,4 @@ Zero command-and-control (C2) domains, dynamic script downloaders, or unauthenti
 
 ---
 
-**Navigation**: [Root Repository README](../../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)
+**Navigation**: [Overview](../README.md) | [Audit Summary](../00-summary.md) | [Hash Ledger](../01-hashes.csv) | [Malware Report](../05-malware-report.md) | [Patch Provenance](../03-patches.md)
